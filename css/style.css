@@ -1,0 +1,376 @@
+/**
+ * Project Name: PSD to HTML Convertion (2nd Project)
+ *
+ * 
+ * Assign Date: 14 March, 2015;
+ * Submition Date: 19 March, 2015;
+ *
+ * 
+ */
+
+/* Reseter for browser styel */
+body{
+    margin: 0;
+    padding: 0;
+    font-family: OpenSans, sans-serif;
+}
+/**
+ * nav bar////////////////////////
+ * 
+ * Top Navigation Bar
+ */
+#nav {
+    height: 80px;
+    padding: 20px 0 0;
+}
+#nav ul{
+    list-style:none;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+}
+#nav>ul>li{
+    float: left;
+    display: inline-block;
+    padding-left: 30px;
+    position: relative;
+}
+
+/**
+ * Navication bar sub menu //////////////////////////////////
+ *
+ * usrally hides but appears when mouse over on parent element
+ */
+
+#nav>ul>li>ul {
+  display: none; /* hides normally */
+}
+
+#nav>ul>li:hover>ul {
+  display: block; /*makes it visibale on hover*/
+  background: #fff;
+  z-index: 999;
+  overflow: hidden;
+  position: fixed;
+  padding: 10px 20px ;
+  border-radius: 4px;
+  margin-left: -20px;
+}
+
+#nav>ul>li>ul>li>a:link{
+    font-size: 18px;
+    color: #434343;
+    text-decoration: none;
+    font-weight: normal;
+    line-height: 40px;
+}
+
+#nav>ul>li>ul>li>a:hover{
+      color: #ff5f3b;  
+}
+
+/**
+ * //ensd sub menu
+ */
+
+#nav>ul>li:first-of-type{
+    padding-left: 0px;
+}
+
+#nav>ul>li>a:link{
+    font-size: 18px;
+    color: #434343;
+    text-decoration: none;
+    font-weight: normal;
+}
+#nav>ul>li>a.active:link{
+      color: #5f2073;
+      background: #f9f9f9;
+      padding: 6px 12px; 
+}
+
+#nav>ul>li>a.active:hover,
+#nav>ul>li>a:hover{
+      color: #ff5f3b;  
+}
+
+/**
+ * slider
+ *
+ * A place for ineractive slider with text and image 
+ * which will animate when it first appears.
+ * it can also manually animate using the left and right 
+ * arrow images.
+ *
+ * the animation functionality will be added later after havign solid
+ * foundation on javaScript and jQuery.
+ */
+#slider{
+    height: 583px;
+    background:url(../images/slider_bg.png) no-repeat top center;
+    background-color: #f3f3f3;
+}
+#slider  #arrow{
+position: relative;
+height: 50px;
+width: 1080;
+margin: 0 auto;
+overflow: hidden;
+	bottom: -210px;
+} 
+#slider  #arrow .left:hover{
+margin-left: 10px;
+} 
+#slider .container{
+    height: 100%;
+    color: #fff;
+}
+
+
+#slider .container .left h3{
+    font-size: 60px;
+    margin: 0;
+}
+
+#slider .container .left h4{
+    font-size: 40px;
+    margin: 0 0 15px;
+    font-weight: normal;
+}
+#slider .container .left h4 sup{
+    font-size: 10px;
+}
+#slider .container .left p{
+    font-size: 14px;
+    line-height: 24px;
+}
+#slider .container #call_to_action{
+    padding-top:40px;
+}
+
+#slider .container #call_to_action p{
+    font-size: 18px;
+}
+
+#slider .container #call_to_action p span{
+    font-weight: bold;
+}
+#slider .container #call_to_action p a{
+    margin-top: 30px;
+}
+
+#slider #slider_image {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    top: -452px;
+    z-index: 90;
+}
+#slider #slider_rss {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    top: -566px;
+    z-index: 99;
+}
+
+/**
+ * MAIN AREA
+ */
+
+/**
+ * Price info Section
+ */
+#price_info{
+    overflow: hidden;
+}
+#price_info h1{
+    font-size: 36px;
+    text-align: center;
+    margin: 55px auto;
+}
+#price_info .price_table{
+    width: 190px;
+    margin: 0 10px;
+    background: #f3f3f3;
+    padding: 15px;
+    float: left;
+    text-align: center;
+}
+
+#price_info .price_table h5{
+    font-size: 18px;
+    font-weight: bold;
+    color: #67267a;
+    border-bottom: 1px solid #b5a2bc;
+    margin: 0 10px;
+    padding: 15px 0;
+}
+#price_info .price_table .price {
+    color:  #b5a2bc;
+    font-size: 12px;
+    display: block;
+    position: relative;
+}
+
+#price_info .price_table .price span:first-of-type{
+    display:block;
+    color: #ff5e3a;
+    font-size: 48px;
+    font-weight: bold;
+}
+#price_info .price_table .price span:last-of-type {
+    position: relative;
+    top: -27px;
+    right: -33px;
+    color: #B4B4B4;
+    font-size: 10px;
+}
+
+#price_info .price_table sup{ font-size: 24px;}
+
+#price_info .price_table p.desc {
+    font-size: 16px;
+    line-height: 30px;
+    margin-top: 0;
+}
+
+#slider .container #call_to_action p a,
+#price_info .price_table p a {
+    background: none repeat scroll 0% 0% #FF5E3A;
+    display: inline-block;
+    padding: 16px 30px;
+    border-radius: 4px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0px 5px 0px #a3322e;
+    text-shadow: 0px -1px #a85157;
+}
+
+/**
+ * GET OUR HELP Section
+ */
+
+#get_our_help {
+    overflow: hidden;
+    color: #010101;
+}
+#get_our_help h2{
+    font-size: 36px;
+    font-weight: normal;
+    margin-top:50px;
+}
+
+#get_our_help #contact_info {
+    font-size: 36px;
+    text-align: center;
+    font-weight: normal;
+    display: table;
+    margin: 50px auto 70px;
+    line-height: 50px;
+}
+#get_our_help #contact_info span{
+    font-weight: bold;
+    color: #67267a;
+}
+
+#get_our_help #contact_info span.middle{
+	display:block;
+	font-weight: normal;
+	font-size: 24px;
+	background: url(../images/divider.png) no-repeat 50% 50%;
+}
+
+#get_our_help .left,
+#get_our_help .right{
+    width:49%;
+    text-align: justify;
+}
+
+
+
+/**
+ * CLIENTS SECTION
+ */
+#clients .center{
+    font-size: 14px;
+    color: #868686;
+}
+
+/* footer area */
+#footer_top{
+    background:#f3f3f3;
+    padding: 40px 0 50px 0;
+}
+#footer_top>div>ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#footer_top>div>ul>li{
+    float: left;
+    display: inline-block;
+    padding-left:35px;
+    margin: 0;
+}
+#footer_top>div>ul>li:first-of-type{
+    padding:0;
+}
+#footer_top>div>ul>li>a:link{
+    color: #434343;
+    text-decoration: none;
+    line-height: 24px;
+}
+
+#footer_top>div>ul>li>a:hover{
+    color: #ff5f3b;
+    text-decoration: none;
+    line-height: 24px;
+}
+#footer_top>div>ul>li>p{
+    margin-top: 0;
+}
+#footer_top>div>ul>li>p span{
+    color: #67267a;
+    font-weight: bold;
+}
+#footer_top>div>ul>li>a:link:first-of-type{
+    font-weight: bold;
+    color:#ff5f3b;
+    text-decoration: none;
+    line-height: 35px;
+}
+/**
+ * Footer Bottom
+ */
+#footer_btm{
+    height: 60px;
+	font-size: 12px;
+    padding-top: 15px;
+}
+#footer_btm p{
+    font-weight: bold;
+}
+#footer_btm p span{
+    font-weight: normal;
+}
+
+/* general classes*/
+.container{ /*defines the fixed width of content*/
+    width: 960px;
+    padding: 0;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.left{
+    float: left;
+}
+
+.right{
+    float: right;
+}
+
+.center{
+    text-align: center;
+}
